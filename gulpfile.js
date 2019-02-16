@@ -1,6 +1,6 @@
 'use strict';
 
-const { src, dest } = require('gulp');
+const { src, dest, parallel } = require('gulp');
 const sass = require('gulp-sass');
 
 function compileSass() {
@@ -14,4 +14,11 @@ function compileSass() {
         .pipe(dest('./dist/css'));
 }
 
-exports.default = compileSass;
+// Copy images from source files into 'build' and 'dist'
+function copy() {
+    return src('./src/images/**/*')
+        .pipe(dest('./build/images'))
+        .pipe(dest('./dist/images'))
+}
+
+exports.default = parallel(compileSass, copy);
