@@ -1,7 +1,14 @@
 'use strict';
 
 const { src, dest, parallel, watch } = require('gulp');
+const rimraf = require('rimraf');
 const sass = require('gulp-sass');
+
+function clean(done) {
+    rimraf('./build', function() {});
+    rimraf('./dist', function() {});
+    done()
+}
 
 function compileSass() {
     return src('./src/scss/**/*.scss')
@@ -25,5 +32,6 @@ function watchFiles() {
     watch("./src/scss/**/*", compileSass);
 }
 
+exports.clean = clean;
 exports.images = images;
 exports.default = parallel(compileSass, images, watchFiles);
