@@ -1,11 +1,12 @@
 'use strict';
 
-const { src, dest, parallel, watch } = require('gulp');
+const { src, dest, parallel, series, watch } = require('gulp');
 const data = require('gulp-data');
 const fs = require('fs');
 const uglify = require('gulp-uglify');
 const rimraf = require('rimraf');
 const sass = require('gulp-sass');
+const server = require('browser-sync').create();
 const template = require('gulp-template');
 
 function clean(done) {
@@ -31,6 +32,20 @@ function images() {
         .pipe(dest('./dist/images'))
 }
 
+function reload(done) {
+    server.reload();
+    done();
+}
+
+function serve(done) {
+    server.init({
+        server: {
+            baseDir: './build'
+        }
+    });
+    done();
+}
+
 function scripts() {
     return src('./src/js/**/*.js')
         .pipe(dest('./build/js'))
@@ -50,11 +65,11 @@ function styles() {
 }
 
 function watchFiles() {
-    watch("./src/**/*.html", html);
-    watch("./src/js/**/*.js", scripts);
-    watch("./src/scss/**/*.scss", styles);
+    watch("./src/**/*.html", series(html, reload));
+    watch("./src/js/**/*.js", series(scripts, reload));
+    watch("./src/scss/**/*.scss", series(styles, reload));
 }
 
 exports.clean = clean;
 exports.images = images;
-exports.default = parallel(html, images, scripts, styles, watchFiles);
+exports.default = parallel(html, images, scripts, serve, styles, watchFiles);
