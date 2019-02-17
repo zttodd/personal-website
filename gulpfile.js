@@ -15,6 +15,12 @@ function clean(done) {
     done()
 }
 
+function favicons() {
+    return src('./src/favicons/**/*')
+        .pipe(dest('./build'))
+        .pipe(dest('./dist'))
+}
+
 function html() {
     return src('src/**/*.html')
         .pipe(data(function() {
@@ -72,4 +78,4 @@ function watchFiles() {
 
 exports.clean = clean;
 exports.images = images;
-exports.default = parallel(html, images, scripts, serve, styles, watchFiles);
+exports.default = parallel(favicons, html, images, scripts, serve, styles, watchFiles);
