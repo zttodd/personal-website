@@ -1,44 +1,44 @@
 @import "helpers";
 
 ::selection {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 html {
-    // https://css-tricks.com/snippets/css/font-stacks/
-    font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  // https://css-tricks.com/snippets/css/font-stacks/
+  font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-    padding: calculateRem(16px);
+  padding: calculateRem(16px);
 }
 
 a {
-    color: #2455c3;
+  color: #2455c3;
 
-    &:focus,
-    &:hover {
-        color: darken(#2455c3, 10%);
-    }
+  &:focus,
+  &:hover {
+    color: darken(#2455c3, 10%);
+  }
 }
 
 .site-title {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .about span {
-    display: block;
+  display: block;
 }
 
 .github {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 @media only screen and (min-width: 768px) {
-    body {
-        padding-bottom: calculateRem(48px);
-        padding-left: calculateRem(72px);
-        padding-right: calculateRem(72px);
-        padding-top: calculateRem(48px);
-    }
+  body {
+    padding-bottom: calculateRem(48px);
+    padding-left: calculateRem(72px);
+    padding-right: calculateRem(72px);
+    padding-top: calculateRem(48px);
+  }
 }
