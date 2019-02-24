@@ -5,5 +5,13 @@ module.exports = {
   output: {
     filename: "site.js"
   },
-  watch: true
+  watch: true,
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"]
+      }
+    ]
+  }
 };
