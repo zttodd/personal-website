@@ -3,6 +3,7 @@
 const { src, dest, parallel, series, watch } = require("gulp");
 const data = require("gulp-data");
 const fs = require("fs");
+const inlinesource = require("gulp-inline-source");
 const rimraf = require("rimraf");
 const sass = require("gulp-sass");
 const server = require("browser-sync").create();
@@ -66,11 +67,24 @@ function styles() {
   );
 }
 
+function inlineStyles() {
+  return src("./build/*.html")
+    .pipe(inlinesource())
+    .pipe(dest("./dist"));
+}
+
 function watchFiles() {
   watch("./src/**/*.html", series(html, reload));
-  watch("./src/scss/**/*.scss", series(styles, reload));
+  watch("./src/scss/**/*.scss", series(styles, inlineStyles, reload));
 }
 
 exports.clean = clean;
 exports.images = images;
-exports.default = parallel(favicons, html, images, serve, styles, watchFiles);
+exports.default = parallel(
+  favicons,
+  html,
+  images,
+  serve,
+  series(styles, inlineStyles),
+  watchFiles
+);
