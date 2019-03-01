@@ -24,6 +24,10 @@ body {
       color: lighten($linkColor, 25%);
     }
 
+    button {
+      background: #fff;
+    }
+
     a:focus,
     button:focus {
       outline: 2px solid lighten($linkColor, 50%);
@@ -60,15 +64,16 @@ a {
 .modes {
   bottom: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 1rem;
   position: absolute;
   left: 0;
-  width: 30vw;
+  width: 35vw;
 
   button {
     border-radius: 0.5rem;
-    font-size: calculateRem(12px);
+    font-size: calculateRem(16px);
+    margin-right: 1rem;
 
     &:hover {
       cursor: pointer;
@@ -86,11 +91,15 @@ a {
 
   .modes {
     bottom: auto;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     left: auto;
     padding: 1.5rem 1rem;
     right: 0;
     top: 0;
     width: 10vw;
+
+    button {
+      font-size: calculateRem(12px);
+    }
   }
 }
