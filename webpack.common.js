@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-  entry: "./src/js/index.js",
+  // entry: "./src/js/index.js",
   output: {
     filename: "site.js"
   },
@@ -9,8 +9,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules)/,
+        loader: "babel-loader",
+        query: {
+          presets: [["@babel/preset-env", { modules: false }]]
+        }
       }
     ]
   }

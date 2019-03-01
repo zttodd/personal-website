@@ -1,16 +1,38 @@
 @import "helpers";
 
+$linkColor: #2455c3;
+
 ::selection {
   background-color: #ddd;
 }
 
-html {
+html,
+button {
   // https://css-tricks.com/snippets/css/font-stacks/
   font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
   padding: calculateRem(16px);
+  transition: background 0.25s ease-in-out;
+
+  &.dark {
+    background: #232323;
+    color: #fff;
+
+    a {
+      color: lighten($linkColor, 25%);
+    }
+
+    a:focus,
+    button:focus {
+      outline: 2px solid lighten($linkColor, 50%);
+    }
+
+    .github {
+      fill: white;
+    }
+  }
 }
 
 a {
@@ -31,7 +53,27 @@ a {
 }
 
 .github {
-  display: inline-flex;
+  // display: inline-flex;
+  width: 32px;
+}
+
+.modes {
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: absolute;
+  left: 0;
+  width: 30vw;
+
+  button {
+    border-radius: 0.5rem;
+    font-size: calculateRem(12px);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -40,5 +82,15 @@ a {
     padding-left: calculateRem(72px);
     padding-right: calculateRem(72px);
     padding-top: calculateRem(48px);
+  }
+
+  .modes {
+    bottom: auto;
+    justify-content: space-evenly;
+    left: auto;
+    padding: 1.5rem 1rem;
+    right: 0;
+    top: 0;
+    width: 10vw;
   }
 }

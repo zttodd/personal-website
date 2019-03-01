@@ -1,6 +1,8 @@
 "use strict";
 
 const { src, dest, parallel, series, watch } = require("gulp");
+const babel = require("gulp-babel");
+const concat = require("gulp-concat");
 const data = require("gulp-data");
 const fs = require("fs");
 const inlinesource = require("gulp-inline-source");
@@ -8,6 +10,7 @@ const rimraf = require("rimraf");
 const sass = require("gulp-sass");
 const server = require("browser-sync").create();
 const template = require("gulp-template");
+const uglify = require("gulp-uglify");
 
 function clean(done) {
   rimraf("./build", function() {});
@@ -54,6 +57,15 @@ function serve(done) {
   done();
 }
 
+function scripts() {
+  return src("./src/js/index.js")
+    .pipe(babel())
+    .pipe(concat("site.js"))
+    .pipe(dest("./build/js"))
+    .pipe(uglify())
+    .pipe(dest("./dist/js"));
+}
+
 function styles() {
   return (
     src("./src/scss/**/*.scss")
@@ -67,7 +79,7 @@ function styles() {
   );
 }
 
-function inlineStyles() {
+function inlineSources() {
   return src("./build/*.html")
     .pipe(inlinesource())
     .pipe(dest("./dist"));
@@ -75,16 +87,18 @@ function inlineStyles() {
 
 function watchFiles() {
   watch("./src/**/*.html", series(html, reload));
-  watch("./src/scss/**/*.scss", series(styles, inlineStyles, reload));
+  watch("./src/js/**/*.js", series(scripts, inlineSources, reload));
+  watch("./src/scss/**/*.scss", series(styles, inlineSources, reload));
 }
 
 exports.clean = clean;
 exports.images = images;
-exports.default = parallel(
+exports.default = series(
   favicons,
   html,
   images,
+  series(scripts, inlineSources),
   serve,
-  series(styles, inlineStyles),
+  series(styles, inlineSources),
   watchFiles
 );
