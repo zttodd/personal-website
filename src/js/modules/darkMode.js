@@ -41,7 +41,13 @@ for (let index = 0; index < buttonProps.length; index++) {
 
   // on click, activate theme
   button.addEventListener("click", function() {
-    body.classList = "";
+    body.classList.forEach(function(index) {
+      if (index === "light") {
+        body.classList.remove("light");
+      } else if (index === "dark") {
+        body.classList.remove("dark");
+      }
+    });
     body.classList.add(buttonProps[index].class);
     localStorage.setItem("mode", buttonProps[index].class);
   });

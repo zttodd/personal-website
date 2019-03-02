@@ -1,0 +1,31 @@
+::selection {
+  background-color: #ddd;
+}
+
+html,
+button {
+  // https://css-tricks.com/snippets/css/font-stacks/
+  font-family: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  padding: calculateRem(16px);
+}
+
+a {
+  color: #2455c3;
+
+  &:focus,
+  &:hover {
+    color: darken(#2455c3, 10%);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding-bottom: calculateRem(48px);
+    padding-left: calculateRem(48px);
+    padding-right: calculateRem(48px);
+    padding-top: calculateRem(36px);
+  }
+}

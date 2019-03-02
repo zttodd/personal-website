@@ -1,0 +1,23 @@
+.info-box {
+  display: inline-block;
+  padding: 1.5rem;
+}
+
+.site-title {
+  margin-top: 0;
+}
+
+.about span {
+  display: block;
+}
+
+.github {
+  // display: inline-flex;
+  width: 32px;
+}
+
+@media only screen and (max-width: 350px) {
+  .site-title {
+    font-size: 1.75rem;
+  }
+}

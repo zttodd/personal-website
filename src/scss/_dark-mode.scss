@@ -47,7 +47,7 @@ body.dark {
 
 .dark .dark,
 .light .light {
-  border-bottom: 1px solid;
+  border-bottom: 2px solid;
 }
 
 .dark .dark:focus {
@@ -62,7 +62,7 @@ body.dark {
     padding: 1.5rem 1rem;
     right: 0;
     top: 0;
-    width: 10vw;
+    width: 15vw;
 
     button {
       font-size: calculateRem(12px);
