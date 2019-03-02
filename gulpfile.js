@@ -34,6 +34,11 @@ function html() {
         return JSON.parse(fs.readFileSync("./data/site.json"));
       })
     )
+    .pipe(
+      data(function() {
+        return JSON.parse(fs.readFileSync("./secret.json"));
+      })
+    )
     .pipe(template())
     .pipe(dest("./build"))
     .pipe(dest("./dist"));

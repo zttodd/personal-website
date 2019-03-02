@@ -34,5 +34,18 @@
         /></svg
     ></a>
     <script src="js/site.js" inline></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=<%= ga %>"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "<%= ga %>");
+    </script>
   </body>
 </html>
