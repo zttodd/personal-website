@@ -1,14 +1,17 @@
 "use strict";
 
-const { src, dest, parallel, series, watch } = require("gulp");
-const babel = require("gulp-babel");
-const concat = require("gulp-concat");
+const { src, dest, series, watch } = require("gulp");
+const babelify = require("babelify");
+const browserify = require("browserify");
+const buffer = require("vinyl-buffer");
 const data = require("gulp-data");
 const fs = require("fs");
 const inlinesource = require("gulp-inline-source");
+const log = require("gulplog");
 const rimraf = require("rimraf");
 const sass = require("gulp-sass");
 const server = require("browser-sync").create();
+const source = require("vinyl-source-stream");
 const template = require("gulp-template");
 const uglify = require("gulp-uglify");
 
@@ -58,12 +61,27 @@ function serve(done) {
 }
 
 function scripts() {
-  return src("./src/js/index.js")
-    .pipe(babel())
-    .pipe(concat("site.js"))
-    .pipe(dest("./build/js"))
-    .pipe(uglify())
-    .pipe(dest("./dist/js"));
+  var b = browserify({
+    entries: "./src/js/index.js",
+    debug: true,
+    transform: [
+      babelify.configure({
+        presets: ["@babel/preset-env"]
+      })
+    ]
+  });
+
+  return (
+    b
+      .bundle()
+      .pipe(source("site.js"))
+      .pipe(buffer())
+      // Add other gulp transformations (eg. uglify) to the pipeline here.
+      .pipe(dest("./build/js/"))
+      .pipe(uglify())
+      .on("error", log.error)
+      .pipe(dest("./dist/js/"))
+  );
 }
 
 function styles() {
@@ -97,8 +115,8 @@ exports.default = series(
   favicons,
   html,
   images,
-  series(scripts, inlineSources),
+  scripts,
   serve,
-  series(styles, inlineSources),
+  styles,
   watchFiles
 );
