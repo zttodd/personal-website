@@ -1,0 +1,18 @@
+.posts-feed {
+  article {
+    margin-bottom: 24px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .title {
+    margin-bottom: 8px;
+  }
+
+  .date {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
