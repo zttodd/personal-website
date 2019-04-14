@@ -12,6 +12,10 @@ h6 {
   padding: 0;
 }
 
+a {
+  color: darken($red, 10%);
+}
+
 a:focus {
   outline: 2px solid $purple;
 }
