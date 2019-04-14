@@ -4,7 +4,7 @@ main {
 
 @media only screen and (min-width: 768px) {
   main,
-  section {
+  .section {
     margin: 0 auto;
   }
 
@@ -13,7 +13,7 @@ main {
     width: 75vw;
   }
 
-  section {
+  .section {
     max-width: 580px;
   }
 }
