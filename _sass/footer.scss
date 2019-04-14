@@ -1,7 +1,8 @@
 footer {
+  margin: 20px;
+
   .section {
     border-top: 1px dashed $gray;
-    display: flex;
     justify-content: space-between;
   }
 
@@ -20,10 +21,24 @@ footer {
   }
 
   li {
-    margin: 0 16px;
+    margin: 0 8px;
 
-    &:last-of-type {
-      margin-right: 0;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  footer {
+    .section {
+      display: flex;
+    }
+
+    ul li {
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 }
