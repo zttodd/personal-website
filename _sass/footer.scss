@@ -1,0 +1,29 @@
+footer {
+  .section {
+    border-top: 1px dashed $gray;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul,
+  p {
+    font-size: 14px;
+    color: darken($gray, 40%);
+    margin-bottom: 14px;
+    margin-top: 14px;
+  }
+
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 16px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
