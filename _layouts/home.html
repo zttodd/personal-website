@@ -13,7 +13,7 @@ intro_content: Home intro lorem ipsum dolor sit amet, consectetur adipiscing eli
 
 <div class="section posts-feed">
   <h2>Recent Posts</h2>
-  {% for post in site.posts %}
+  {% for post in site.posts limit:5 %}
   <article>
     <p class="title">
       <a href="{{ post.url }}">
@@ -25,4 +25,6 @@ intro_content: Home intro lorem ipsum dolor sit amet, consectetur adipiscing eli
     </p>
   </article>
   {% endfor %}
+
+  <p><a href="/blog/" class="button">View more posts</a></p>
 </div>
