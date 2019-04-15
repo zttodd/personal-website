@@ -54,3 +54,9 @@ nav a {
 header a:focus {
   outline: 2px solid $cyan;
 }
+
+@media only screen and (min-width: 768px) {
+  header h1 {
+    font-size: 40px;
+  }
+}
