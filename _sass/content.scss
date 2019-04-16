@@ -9,6 +9,14 @@ main {
   margin-bottom: 24px;
   padding: 16px;
 
+  a {
+    color: $green;
+
+    &:focus {
+      outline-color: $green;
+    }
+  }
+
   *:last-of-type {
     margin-bottom: 0;
   }
