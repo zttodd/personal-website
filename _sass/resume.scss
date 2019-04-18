@@ -1,0 +1,41 @@
+.inline,
+.block {
+  dd {
+    line-height: 22px;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+}
+
+.inline {
+  dd {
+    margin-left: 0;
+  }
+
+  dd + dt {
+    margin-top: 16px;
+  }
+}
+
+.block dd {
+  margin-left: 0;
+}
+
+@media only screen and (min-width: 640px) {
+  .inline {
+    dd {
+      // border-left: 1px solid $gray;
+      display: inline;
+      margin-left: 0;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    dt + dd {
+      border-left: none;
+      padding-left: 0;
+    }
+  }
+}
