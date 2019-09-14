@@ -1,10 +1,15 @@
-const { src, dest } = require("gulp");
-const sass = require('gulp-sass');
+const { src, dest, series, watch } = require("gulp");
+const sass = require("gulp-sass");
 
-function css() {
-    return src('./sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(dest('./css'));
+function compileCSS() {
+  return src("./sass/**/*.scss")
+    .pipe(sass().on("error", sass.logError))
+    .pipe(dest("./css"));
 }
 
-exports.default = css;
+function watchSass(callback) {
+  watch("sass/**/*.scss", series(compileCSS));
+  callback();
+}
+
+exports.default = series(compileCSS, watchSass);
