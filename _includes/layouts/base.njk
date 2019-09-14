@@ -12,7 +12,9 @@
     {% include "header.njk" %}
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      {{ content | safe }}
+      <div class="section container">
+        {{ content | safe }}
+      </div>
     </main>
 
     {% include "footer.njk" %}
