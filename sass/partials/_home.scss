@@ -1,0 +1,20 @@
+.container {
+  article {
+    margin-bottom: 24px;
+  }
+
+  .title {
+    margin-bottom: 8px;
+  }
+
+  .date,
+  .tags {
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+
+  article:last-of-type {
+    margin-bottom: 32px;
+  }
+}

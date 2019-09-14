@@ -1,5 +1,3 @@
-_data/analytics.yml
-_drafts
-_site
-.sass-cache
-.jekyll-metadata
+_site/
+node_modules/
+package-lock.json

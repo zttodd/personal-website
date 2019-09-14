@@ -1,0 +1,10 @@
+---
+layout: layouts/home.njk
+---
+
+<h1>Recent Posts</h1>
+
+{% set postslist = collections.posts | head(-3) %}
+{% include "postslist.njk" %}
+
+<p>View more posts in <a href="{{ '/posts/' | url }}">the blog</a>.</p>
