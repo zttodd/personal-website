@@ -1,0 +1,8 @@
+$futura: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, Times, Times New Roman, serif;
+
+html,
+button {
+  // https://css-tricks.com/snippets/css/font-stacks/
+  font-family: $futura;
+}
