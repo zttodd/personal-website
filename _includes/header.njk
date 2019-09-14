@@ -1,5 +1,5 @@
 <header>
-    <h1><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+    <h1 class="site-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
     <nav>
         <ul>
             {%- for nav in collections.nav | reverse -%}
