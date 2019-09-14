@@ -169,23 +169,26 @@ footer {
   footer ul li:last-of-type {
     margin-right: 0; } }
 
-.posts-feed article {
+.container article {
   margin-bottom: 24px; }
 
-.posts-feed .title {
+.container .title {
   margin-bottom: 8px; }
 
-.posts-feed .date {
+.container .date,
+.container .tags {
   font-size: 14px;
+  margin-bottom: 8px;
   margin-top: 0; }
 
-.posts-feed article:last-of-type {
+.container article:last-of-type {
   margin-bottom: 32px; }
 
 .page article {
   font-family: Georgia, Times, Times New Roman, serif; }
 
-.post .date {
+.post .date,
+.post .tags {
   font-size: 14px;
   margin-top: 8px; }
 
