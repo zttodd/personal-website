@@ -7,4 +7,4 @@ navtitle: About
 templateClass: tmpl-post
 ---
 
-I am a person that writes stuff.
+I'm a front-end web developer at [Indiana University](https://indiana.edu).
