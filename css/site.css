@@ -192,5 +192,8 @@ footer {
   font-size: 14px;
   margin-top: 8px; }
 
-.post article {
+.post article *:not(h1) {
   font-family: Georgia, Times, Times New Roman, serif; }
+
+.post article h1 {
+  font-size: 1.75em; }
