@@ -5,7 +5,11 @@
     margin-top: 8px;
   }
 
-  article {
+  article *:not(h1) {
     font-family: $georgia;
+  }
+
+  article h1 {
+    font-size: 1.75em;
   }
 }
