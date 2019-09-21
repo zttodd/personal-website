@@ -2,7 +2,7 @@
     <h1 class="site-title"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
     <nav>
         <ul>
-            {%- for nav in collections.nav | reverse -%}
+            {%- for nav in collections.nav -%}
             <li><a href="{{ nav.url | url }}">{{ nav.data.navtitle }}</a></li>
             {%- endfor -%}
         </ul>
