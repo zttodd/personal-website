@@ -89,7 +89,7 @@ nav ul {
   list-style-type: none;
   justify-content: center;
   margin: 0;
-  padding: 10px 0 20px 0; }
+  padding: 0 0 20px 0; }
 
 nav li {
   margin: 0 10px; }
@@ -98,7 +98,9 @@ nav a {
   color: #fff; }
 
 .site-title {
-  text-align: center; }
+  margin: 0 auto;
+  max-width: 580px;
+  padding-bottom: 24px; }
 
 header a:focus {
   outline: 2px solid #3dfda8; }
