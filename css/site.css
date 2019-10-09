@@ -98,8 +98,9 @@ nav a {
   color: #fff; }
 
 .site-title {
-  padding-bottom: 24px;
-  text-align: center; }
+  margin: 0 auto;
+  max-width: 580px;
+  padding-bottom: 24px; }
 
 header a:focus {
   outline: 2px solid #3dfda8; }
