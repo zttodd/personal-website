@@ -21,8 +21,7 @@ header {
   }
 
   h1 {
-    margin: 0;
-    padding-top: 16px;
+    padding: 20px;
   }
 
   h1 a {
@@ -48,10 +47,7 @@ nav a {
 }
 
 .site-title {
-  margin: 0 auto;
-  max-width: 580px;
   padding-bottom: 24px;
-  // text-align: center;
 }
 
 header a:focus {
@@ -61,5 +57,10 @@ header a:focus {
 @media only screen and (min-width: 768px) {
   header h1 {
     font-size: 40px;
+  }
+
+  .site-title {
+    margin: 0 auto;
+    max-width: 580px;
   }
 }

@@ -78,8 +78,7 @@ header {
     position: absolute;
     width: 100%; }
   header h1 {
-    margin: 0;
-    padding-top: 16px; }
+    padding: 20px; }
   header h1 a {
     color: #04e788;
     text-decoration: none; }
@@ -98,8 +97,6 @@ nav a {
   color: #fff; }
 
 .site-title {
-  margin: 0 auto;
-  max-width: 580px;
   padding-bottom: 24px; }
 
 header a:focus {
@@ -107,7 +104,10 @@ header a:focus {
 
 @media only screen and (min-width: 768px) {
   header h1 {
-    font-size: 40px; } }
+    font-size: 40px; }
+  .site-title {
+    margin: 0 auto;
+    max-width: 580px; } }
 
 main {
   padding: 20px; }
