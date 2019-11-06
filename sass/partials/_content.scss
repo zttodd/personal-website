@@ -11,10 +11,10 @@ main {
 
   a {
     color: $green;
+  }
 
-    &:focus {
-      outline-color: $green;
-    }
+  a:focus {
+    outline-color: $green;
   }
 
   *:last-of-type {

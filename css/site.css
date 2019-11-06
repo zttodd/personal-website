@@ -77,35 +77,18 @@ header {
     height: 4px;
     position: absolute;
     width: 100%; }
-  header h1 {
-    padding: 20px; }
-  header h1 a {
-    color: #04e788;
-    text-decoration: none; }
-
-nav ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
-  margin: 0;
-  padding: 0 0 20px 0; }
-
-nav li {
-  margin: 0 10px; }
-
-nav a {
-  color: #fff; }
 
 .site-title {
-  padding-bottom: 24px; }
-
-header a:focus {
-  outline: 2px solid #3dfda8; }
+  padding: 20px; }
+  .site-title a {
+    color: #04e788;
+    text-decoration: none; }
+  .site-title a:focus {
+    outline: 2px solid #3dfda8; }
 
 @media only screen and (min-width: 768px) {
-  header h1 {
-    font-size: 40px; }
   .site-title {
+    font-size: 40px;
     margin: 0 auto;
     max-width: 580px; } }
 
@@ -120,8 +103,8 @@ main {
   padding: 16px; }
   .content a {
     color: #9ede37; }
-    .content a:focus {
-      outline-color: #9ede37; }
+  .content a:focus {
+    outline-color: #9ede37; }
   .content *:last-of-type {
     margin-bottom: 0; }
 

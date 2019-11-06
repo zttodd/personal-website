@@ -19,47 +19,24 @@ header {
     position: absolute;
     width: 100%;
   }
-
-  h1 {
-    padding: 20px;
-  }
-
-  h1 a {
-    color: $dark-green;
-    text-decoration: none;
-  }
-}
-
-nav ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
-  margin: 0;
-  padding: 0 0 20px 0;
-}
-
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
-  color: $white;
 }
 
 .site-title {
-  padding-bottom: 24px;
-}
+  padding: 20px;
 
-header a:focus {
-  outline: 2px solid $cyan;
+  a {
+    color: $dark-green;
+    text-decoration: none;
+  }
+
+  a:focus {
+    outline: 2px solid $cyan;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-  header h1 {
-    font-size: 40px;
-  }
-
   .site-title {
+    font-size: 40px;
     margin: 0 auto;
     max-width: 580px;
   }
