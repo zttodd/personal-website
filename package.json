@@ -1,0 +1,26 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "[![Netlify Status](https://api.netlify.com/api/v1/badges/3860ee70-8e13-4ac9-aabd-e018b48395d5/deploy-status)](https://app.netlify.com/sites/zacharytodd/deploys)",
+  "main": ".eleventy.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "concurrently": "^5.1.0",
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "start": "concurrently \"eleventy\" \"gulp\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zttodd/personal-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zttodd/personal-website/issues"
+  },
+  "homepage": "https://github.com/zttodd/personal-website#readme"
+}
