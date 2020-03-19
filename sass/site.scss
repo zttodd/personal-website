@@ -1,8 +1,7 @@
-@import "partials/reset";
-@import "partials/typography";
+// Global
+@import "partials/global/prefix";
+@import "partials/global/reset";
+@import "partials/global/typography";
 
-.z {
-  &-header__title {
-    font-family: $sans-serif;
-  }
-}
+// Sections
+@import "partials/sections/header";
