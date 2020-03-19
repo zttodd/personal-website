@@ -1,5 +1,11 @@
 .#{$prefix} {
+  &-header {
+    background: linear-gradient(180deg, black 0%, #2a2a2a 100%);
+    padding: 1rem;
+  }
+
   &-header__title {
+    color: #04e788;
     font-family: $sans-serif;
   }
 }
