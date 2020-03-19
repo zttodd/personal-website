@@ -1,7 +1,8 @@
-// Global
-@import "partials/global/prefix";
+// Global variables
+@import "partials/global/variables";
+
+// Browser style reset
 @import "partials/global/reset";
-@import "partials/global/typography";
 
 // Sections
 @import "partials/sections/header";
