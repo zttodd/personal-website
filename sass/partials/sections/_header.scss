@@ -1,7 +1,19 @@
 .#{$prefix} {
   &-header {
     background: linear-gradient(180deg, black 0%, #2a2a2a 100%);
-    padding: 1rem;
+    padding: 1.25rem;
+    position: relative;
+
+    &:after {
+      content: "";
+      background: #6930df;
+      background: linear-gradient(90deg, #6930df 0%, #04e788 100%);
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      position: absolute;
+      width: 100%;
+    }
   }
 
   &-header__title {
