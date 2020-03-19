@@ -1,6 +1,7 @@
 module.exports = {
   dir: {
-    input: "src/templates",
+    input: ".",
+    data: "_data",
     output: "_site"
   }
 };
