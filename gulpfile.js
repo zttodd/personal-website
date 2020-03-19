@@ -6,14 +6,14 @@ sass.compiler = require('sass');
 
 // Build Sass into CSS
 function compileSass() {
-  return src('./src/sass/**/*.scss')
+  return src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(dest('./_site/css'));
 }
 
 // Watch Sass files for changes
 function watchSass() {
-  watch('./src/sass/**/*.scss', compileSass);
+  watch('./sass/**/*.scss', compileSass);
 }
 
 exports.default = series(compileSass, watchSass);
