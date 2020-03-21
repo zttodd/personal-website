@@ -4,6 +4,11 @@ $prefix: "z";
 // Font stack
 $sans-serif: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+// Spacing breakpoints
+$spacing-sm: .75rem;
+$spacing-md: 1.25rem;
+$spacing-lg: 1.75rem;
+
 // Viewport breakpoints
 $breakpoint-sm: (480em/16);
 $breakpoint-md: (768em/16);

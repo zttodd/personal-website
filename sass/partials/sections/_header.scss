@@ -1,6 +1,6 @@
 .#{$prefix}-header {
   background: linear-gradient(180deg, black 0%, #2a2a2a 100%);
-  padding: 1.25rem;
+  padding: $spacing-md;
   position: relative;
 
   &:after {
