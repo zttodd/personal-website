@@ -1,10 +1,13 @@
-// Global variables
-@import "partials/global/variables";
-
-// Browser style reset
+// Reset browser default styles
 @import "partials/global/reset";
 
-// Containers
+// Set up global variables
+@import "partials/global/variables";
+
+// Default page and element styles
+@import "partials/global/defaults";
+
+// Container widths
 @import "partials/global/containers";
 
 // Sections

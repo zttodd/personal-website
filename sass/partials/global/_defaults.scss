@@ -1,0 +1,4 @@
+// Set all elements to "system default" font stack
+h1, h2, h3, h4, h5, h6, a, p, ol, ul, dl, blockquote {
+  font-family: $system;
+}
