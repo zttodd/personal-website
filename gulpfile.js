@@ -16,4 +16,10 @@ function watchSass() {
   watch('./sass/**/*.scss', compileSass);
 }
 
-exports.default = series(compileSass, watchSass);
+function copyFavicons() {
+  return src('./images/favicons/*')
+    .pipe(dest('./_site'));
+}
+
+exports.favicons = copyFavicons;
+exports.default = series(copyFavicons, compileSass, watchSass);
