@@ -1,0 +1,13 @@
+.#{$prefix}-container {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .#{$prefix}-container--md {
+    max-width: 60vw;
+  }
+  
+  .#{$prefix}-container--lg {
+    max-width: 80vw;
+  }
+}

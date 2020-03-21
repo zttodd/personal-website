@@ -1,3 +1,10 @@
+// CSS class prefix
 $prefix: "z";
 
+// Font stack
 $sans-serif: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Viewport breakpoints
+$breakpoint-sm: (480em/16);
+$breakpoint-md: (800em/16);
+$breakpoint-lg: (1000em/16);

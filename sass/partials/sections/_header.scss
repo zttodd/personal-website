@@ -1,24 +1,21 @@
-.#{$prefix} {
-  &-header {
-    background: linear-gradient(180deg, black 0%, #2a2a2a 100%);
-    padding: 1.25rem;
-    position: relative;
+.#{$prefix}-header {
+  background: linear-gradient(180deg, black 0%, #2a2a2a 100%);
+  padding: 1.25rem;
+  position: relative;
 
-    &:after {
-      content: "";
-      background: #6930df;
-      background: linear-gradient(90deg, #6930df 0%, #04e788 100%);
-      bottom: 0;
-      left: 0;
-      height: 4px;
-      position: absolute;
-      width: 100%;
-    }
+  &:after {
+    content: "";
+    background: #6930df;
+    background: linear-gradient(90deg, #6930df 0%, #04e788 100%);
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    position: absolute;
+    width: 100%;
   }
 
-  &-header__title {
+  &__title {
     color: #04e788;
     font-family: $sans-serif;
   }
 }
-
