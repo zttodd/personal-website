@@ -2,6 +2,12 @@
   margin: 0 auto;
 }
 
+@media screen and (min-width: $breakpoint-md) {
+  .#{$prefix}-container {
+    max-width: 80vw;
+  }
+}
+
 @media screen and (min-width: $breakpoint-lg) {
   .#{$prefix}-container--md {
     max-width: 60vw;
