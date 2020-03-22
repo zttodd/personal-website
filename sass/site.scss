@@ -1,12 +1,18 @@
-@import "partials/typography";
-@import "partials/colors";
+// Reset browser default styles
+@import "partials/global/reset";
 
-@import "partials/global";
-@import "partials/header";
-@import "partials/content";
-@import "partials/pagination";
-@import "partials/footer";
+// Set up global variables
+@import "partials/global/variables";
 
-@import "partials/home";
-@import "partials/page";
-@import "partials/post";
+// Default page and element styles
+@import "partials/global/defaults";
+
+// Container widths
+@import "partials/global/containers";
+
+// Sections
+@import "partials/sections/header";
+@import "partials/sections/main-content";
+
+// Components
+@import "partials/components/links"

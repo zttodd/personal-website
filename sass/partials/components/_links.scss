@@ -1,0 +1,7 @@
+a {
+  color: $red;
+
+  &:focus {
+    outline: 2px solid $purple;
+  }
+}
