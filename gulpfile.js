@@ -22,5 +22,8 @@ function copyFavicons() {
     .pipe(dest('./_site'));
 }
 
-exports.favicons = copyFavicons;
+// Build only
+exports.build = series(copyFavicons, compileSass);
+
+// Build and watch files
 exports.default = series(copyFavicons, compileSass, watchSass);
