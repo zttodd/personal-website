@@ -1,0 +1,22 @@
+// CSS class prefix
+$prefix: "z";
+
+// Font stacks
+$sans-serif: Futura, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+// Colors
+$black: #2a2a2a;
+$green: #04e788;
+$purple: #6930df;
+$red: #d30255;
+
+// Spacing breakpoints
+$spacing-sm: .75rem;
+$spacing-md: 1.25rem;
+$spacing-lg: 1.75rem;
+
+// Viewport breakpoints
+$breakpoint-sm: (480em/16);
+$breakpoint-md: (768em/16);
+$breakpoint-lg: (1024em/16);

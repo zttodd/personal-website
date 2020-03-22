@@ -1,20 +1,25 @@
-const { src, dest, series, watch } = require("gulp");
-const sass = require("gulp-sass");
+const { src, dest, series, watch } = require('gulp');
+const sass = require('gulp-sass');
 
-function copyFavicon() {
-  return src("./favicon.ico")
-    .pipe(dest("./_site"));
+// Set compiler to Dart Sass
+sass.compiler = require('sass');
+
+// Build Sass into CSS
+function compileSass() {
+  return src('./sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(dest('./_site/css'));
 }
 
-function compileCSS() {
-  return src("./sass/**/*.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(dest("./css"));
+// Watch Sass files for changes
+function watchSass() {
+  watch('./sass/**/*.scss', compileSass);
 }
 
-function watchSass(callback) {
-  watch("sass/**/*.scss", series(compileCSS));
-  callback();
+function copyFavicons() {
+  return src('./images/favicons/*')
+    .pipe(dest('./_site'));
 }
 
-exports.default = series(copyFavicon, compileCSS, watchSass);
+exports.favicons = copyFavicons;
+exports.default = series(copyFavicons, compileSass, watchSass);

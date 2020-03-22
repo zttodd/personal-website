@@ -1,0 +1,23 @@
+.#{$prefix}-container {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .#{$prefix}-container {
+    max-width: 80vw;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .#{$prefix}-container--sm {
+    max-width: 45vw;
+  }
+
+  .#{$prefix}-container--md {
+    max-width: 60vw;
+  }
+  
+  .#{$prefix}-container--lg {
+    max-width: 80vw;
+  }
+}
