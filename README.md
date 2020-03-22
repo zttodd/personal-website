@@ -1,3 +1,11 @@
 # Personal Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/3860ee70-8e13-4ac9-aabd-e018b48395d5/deploy-status)](https://app.netlify.com/sites/zacharytodd/deploys)
+This is the repository for [zacharytodd.com](zacharytodd.com).
+
+The website is built using:
+- `Eleventy`: compiles data and content into static HTML pages
+- `Nunjucks`: for templating within Eleventy
+- `Sass`: extends CSS for more features and preprocessing
+- `Gulp`: compiles Sass into CSS and copies files into build
+
+And deployed using [Netlify](https://netlify.com).
