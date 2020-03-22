@@ -13,6 +13,7 @@
   },
   "scripts": {
     "start": "concurrently \"gulp\" \"npx eleventy --serve\"",
+    "build": "concurrently \"gulp\" \"npx eleventy\"",
     "watch": "npx eleventy --watch"
   },
   "repository": {
