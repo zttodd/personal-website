@@ -16,6 +16,7 @@ function watchSass() {
   watch('./sass/**/*.scss', compileSass);
 }
 
+// Copy favicons into _site
 function copyFavicons() {
   return src('./images/favicons/*')
     .pipe(dest('./_site'));
