@@ -1,6 +1,6 @@
 # Personal Website
 
-This is the repository for [zacharytodd.com](zacharytodd.com).
+This is the repository for [zacharytodd.com](https://zacharytodd.com).
 
 The website is built using:
 - `Eleventy`: compiles data and content into static HTML pages
