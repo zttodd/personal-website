@@ -1,0 +1,9 @@
+@media screen and (min-width: $breakpoint-md) {
+  .#{$prefix}-grid {
+    display: flex;
+
+    &__column {
+      flex: 1;
+    }
+  }
+}

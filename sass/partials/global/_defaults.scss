@@ -2,3 +2,12 @@
 h1, h2, h3, h4, h5, h6, a, p, ol, ul, dl, blockquote {
   font-family: $system;
 }
+
+ul {
+  padding-left: $spacing-sm * 3;
+}
+
+li {
+  line-height: 1.5;
+  list-style-type: square;
+}
