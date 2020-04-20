@@ -1,3 +1,7 @@
 .#{$prefix}-content {
-  padding: $spacing-md;
+  padding: $spacing-lg $spacing-md;
+
+  * + * {
+    margin-top: $spacing-sm;
+  }
 }
