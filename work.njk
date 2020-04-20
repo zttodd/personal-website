@@ -1,0 +1,86 @@
+---
+layout: base.njk
+page_title: Work Experience
+
+languages:
+- name: CSS / Sass
+- name: JavaScript (ES6)
+- name: JSON
+- name: Markdown
+- name: Nunjucks
+  link: https://mozilla.github.io/nunjucks/
+- name: Semantic HTML
+
+tools:
+- name: Adobe Photoshop
+- name: Bash
+- name: Eleventy
+  link: https://www.11ty.dev/
+- name: ESLint
+  link: https://eslint.org/
+- name: Fractal
+  link: https://fractal.build/
+- name: Gulp
+  link: https://gulpjs.com/
+- name: npm
+- name: Slack
+- name: Zoom
+
+other:
+- Developing with accessibility in mind
+- Using GitHub for code reviews, issues, pull requests, and releases
+- Automating workflows with <a href="https://github.com/features/actions">GitHub Actions</a>
+- Writing Sass using the <a href="http://getbem.com/introduction/">BEM methodology</a>
+- Using the <a href="https://danielkummer.github.io/git-flow-cheatsheet/">GitFlow</a> model for feature development
+- Writing technical documentation
+- Creating and working with <a href="https://css-tricks.com/what-are-design-tokens/">design tokens</a>
+- Working under a billable hours model
+---
+
+<h2>{{ page_title }}</h2>
+
+<p>I'm experienced with the following:</p>
+
+<div class="z-grid">
+  <div class="z-grid__column">
+    <h3>Languages</h3>
+    <ul>
+      {% for language in languages %}
+        <li>
+          {% if language.link %}
+            <a href="{{ language.link }}">
+          {% endif %}
+          {{ language.name | safe }}</li>
+          {% if language.link %}
+            </a>
+          {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h3>Libraries and tools</h3>
+    <ul>
+      {% for tool in tools %}
+        <li>
+          {% if tool.link %}
+            <a href="{{ tool.link }}">
+          {% endif %}
+          {{ tool.name | safe }}</li>
+          {% if tool.link %}
+            </a>
+          {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="z-grid__column">
+    <h3>Other skills</h3>
+    <ul>
+      {% for skill in other %}
+        <li>
+          {{ skill | safe }}</li>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
