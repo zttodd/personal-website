@@ -1,0 +1,21 @@
+.#{$prefix}-social {
+  display: flex;
+  margin-top: $spacing-md;
+  align-items: center;
+
+  &__icons {
+    line-height: 12px;
+    margin-top: 0;
+    margin-left: $spacing-sm;
+    margin-right: $spacing-sm;
+    width: $spacing-lg;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

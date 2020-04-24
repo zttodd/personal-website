@@ -13,9 +13,13 @@
 // Grid
 @import "partials/global/grid";
 
+// Display
+@import "partials/global/display";
+
 // Sections
 @import "partials/sections/header";
 @import "partials/sections/main-content";
 
 // Components
-@import "partials/components/links"
+@import "partials/components/links";
+@import "partials/components/social-icons";
