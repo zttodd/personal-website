@@ -1,5 +1,5 @@
 // Set all elements to "system default" font stack
-h1, h2, h3, h4, h5, h6, a, p, ol, ul, dl, blockquote {
+h1, h2, h3, h4, h5, h6, a, p, ol, ul, dl, blockquote, small {
   font-family: $system;
   line-height: 1.4;
 }
