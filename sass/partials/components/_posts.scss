@@ -1,0 +1,11 @@
+.z-postslist {
+  &__post + &__post {
+    border-top: 1px solid #ccc;
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+  }
+
+  &__date {
+    font-size: .8em;
+  }
+}
