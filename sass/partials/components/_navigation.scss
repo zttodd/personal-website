@@ -1,6 +1,9 @@
 .z-nav {
   &__list {
     list-style-type: none;
+    margin-bottom: $spacing-sm;
+    margin-top: $spacing-sm;
+    padding-left: 0;
   }
 
   &__list-link {

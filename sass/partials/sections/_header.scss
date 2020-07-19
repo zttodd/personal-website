@@ -14,9 +14,25 @@
     width: 100%;
   }
 
+  &__flex-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__title-text {
     color: #04e788;
     font-family: $sans-serif;
     text-decoration: none;
+  }
+}
+
+@media screen and (min-width: $breakpoint-md) {
+  .#{$prefix}-header {
+    &__flex-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
