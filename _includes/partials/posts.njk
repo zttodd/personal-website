@@ -1,9 +1,9 @@
-<div class="z-postslist">
+<div class="z-posts">
   {% for post in collections.post | reverse %}
-    <article class="z-postslist__post">
-      <h3 class="z-postslist__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
-      <small class="z-postslist__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</small>
-      <p class="z-postslist__description">{{ post.data.description }}</p>
+    <article class="z-posts__post">
+      <h3 class="z-posts__title"><a href="{{ post.url | url }}">{{ post.data.title }}</a></h3>
+      <small class="z-posts__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</small>
+      <p class="z-posts__description">{{ post.data.description }}</p>
     </article>
   {% endfor %}
 </div>

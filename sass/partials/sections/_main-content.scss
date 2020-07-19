@@ -1,6 +1,10 @@
 .#{$prefix}-content {
   padding: $spacing-lg $spacing-md;
 
+  &__intro {
+    padding-bottom: $spacing-sm / 2;
+  }
+
   * + * {
     margin-top: $spacing-sm;
   }
