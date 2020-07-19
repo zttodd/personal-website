@@ -22,8 +22,14 @@ function copyFavicons() {
     .pipe(dest('./_site'));
 }
 
+// Copy images from posts into _site
+function copyPostImages() {
+  return src('./images/posts/**/*')
+    .pipe(dest('./_site/images/posts'));
+}
+
 // Build only
-exports.build = series(copyFavicons, compileSass);
+exports.build = series(copyFavicons, copyPostImages, compileSass);
 
 // Build and watch files
-exports.default = series(copyFavicons, compileSass, watchSass);
+exports.default = series(copyFavicons, copyPostImages, compileSass, watchSass);
