@@ -1,0 +1,15 @@
+.z-nav {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__list-link {
+    color: #fff;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

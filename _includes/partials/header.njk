@@ -1,7 +1,11 @@
 <header class="z-header">
-  <div class="z-container z-container--md">
-    <h1>
-      <a href="/" class="z-header__title">{{ global.site_title }}</a>
-    </h1>
+  <div class="z-container z-container--md z-flex z-justify-space-between">
+    <div class="z-header__title">
+      <h1>
+        <a href="/" class="z-header__title-text">{{ global.site_title }}</a>
+      </h1>
+    </div>
+
+    {% include "./navigation.njk" %}
   </div>
 </header>
