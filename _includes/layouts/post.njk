@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 ---
 
-<h2>{{ title }}</h2>
-<small datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</small>
+<h2 class="z-content__title">{{ title }}</h2>
+<small class="z-content__date" datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</small>
 
 {{ content | safe }}

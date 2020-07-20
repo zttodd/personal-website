@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 
-title: Readability of indentation in Visual Studio Code
+title: Improving the readability of indentation in Visual Studio Code
 description: Leverage colors and whitespace rendering to improve the readability of indentation in VSCode
 date: 2020-07-19
 tags:

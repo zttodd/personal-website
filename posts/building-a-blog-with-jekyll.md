@@ -2,7 +2,7 @@
 layout: layouts/post.njk
 
 title: Building a blog with Jekyll
-description: Setting up a blog with the Jekyll static site generator
+description: Set up a blog with the Jekyll static site generator
 date: 2019-04-27
 tags:
   - post
