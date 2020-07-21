@@ -1,9 +1,14 @@
 .z-nav {
   &__list {
+    display: flex;
     list-style-type: none;
     margin-bottom: $spacing-sm;
     margin-top: $spacing-sm;
     padding-left: 0;
+  }
+
+  &__list-item + &__list-item {
+    margin-left: $spacing-md;
   }
 
   &__list-link {
